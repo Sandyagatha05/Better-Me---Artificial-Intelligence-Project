@@ -1,48 +1,48 @@
 # Better Me - Health & Wellness Chatbot
 
-Aplikasi web chatbot yang menggunakan teknologi AI untuk membantu pengguna dalam perjalanan kesehatan dan kebugaran mereka.
+A web-based chatbot application that use AI technology to support users in their health and wellness journey.
 
-## 🚀 Fitur
+## 🚀 Features
 
-- **Hybrid AI System**: Menggabungkan database lokal dengan OpenAI API
-- **Input Validation**: Validasi dan sanitasi input untuk keamanan
-- **Error Handling**: Penanganan error yang komprehensif
-- **Loading States**: Indikator loading yang informatif
-- **Responsive Design**: Interface yang responsif dan user-friendly
+- **Hybrid AI System**: Combines a local database with the OpenAI API
+- **Input Validation**: Input validation for security
+- **Error Handling**: Comprehensive error management
+- **Loading States**: Informative loading indicators
+- **Responsive Design**: User-friendly and responsive interface
 
-## 📁 Struktur File
+## 📁 File Structure
 
 ```
 betterme/
-├── index.html          # Struktur HTML utama
-├── script.js           # Logika aplikasi JavaScript
-├── styles.css          # Styling CSS
-├── main.properties     # File konfigurasi
-├── tuning.txt          # Database Q&A lokal
+├── index.html          # Main HTML structure
+├── script.js           # Application logic in JavaScript
+├── styles.css          # CSS styling
+├── main.properties     # Configuration file
+├── tuning.txt          # Local Q&A database
 ├── pics/
-│   └── lion.png        # Avatar bot
-└── README.md           # Dokumentasi ini
+│   └── lion.png        # Bot avatar
+└── README.md           # This documentation
 ```
 
-## ⚙️ Setup & Konfigurasi
+## ⚙️ Setup & Configuration
 
 ### 1. API Key Configuration
 
-**Untuk Development:**
-1. Buka file `main.properties`
-2. Ganti `your_openai_api_key_here` dengan API key OpenAI Anda yang sebenarnya
-3. Simpan file
+**For Development:**
+1. Open the `main.properties` file
+2. Replace `your_openai_api_key_here` with your actual OpenAI API key
+3. Save the file
 
-**Untuk Production:**
-Set environment variable `OPENAI_API_KEY` di server Anda.
+**For Production:**
+Set the environment variable `OPENAI_API_KEY` on your server.
 
-### 2. Menjalankan Aplikasi
+### 2. Running the Application
 
-1. Pastikan semua file ada di folder yang sama
-2. Buka `index.html` di web browser
-3. Aplikasi siap digunakan!
+1. Ensure all files are located in the same folder
+2. Open `index.html` in a browser web
+3. The application is ready to use!
 
-## 🔧 Konfigurasi Lanjutan
+## 🔧 Advanced Configuration
 
 ### File main.properties
 
@@ -65,53 +65,42 @@ MAX_INPUT_LENGTH=1000
 ENABLE_INPUT_VALIDATION=true
 ```
 
-## 🛡️ Keamanan
+## 🎯 How it Works
 
-- ✅ API key tidak lagi hardcoded
-- ✅ Input validation dan sanitasi
-- ✅ Error handling yang aman
-- ✅ Rate limiting untuk API calls
+1. **User Input** → Validate input
+2. **Local Database Check** → Search in `tuning.txt`
+3. **Found?** → Display local answer
+4. **Not Found?** → Call OpenAI API
+5. **Display Response** → Show the answer
 
-## 🎯 Cara Kerja
+## 📝 Local Database
 
-1. **User Input** → Validasi input
-2. **Local Database Check** → Cari di `tuning.txt`
-3. **Found?** → Tampilkan jawaban lokal
-4. **Not Found?** → Panggil OpenAI API
-5. **Display Response** → Tampilkan jawaban
-
-## 📝 Database Lokal
-
-File `tuning.txt` berisi Q&A yang sering ditanyakan tentang platform Better Me. Format:
+The `tuning.txt` file contains frequently asked Q&A about the Better Me platform. Format:
 ```
-Pertanyaan?
-Jawaban untuk pertanyaan tersebut.
+Question?
+Answer to that question.
 
-Pertanyaan lain?
-Jawaban untuk pertanyaan lain.
+Question?
+Answer to that question.
 ```
 
 ## 🐛 Troubleshooting
 
 ### API Key Issues
-- Pastikan API key valid di `main.properties`
-- Cek console browser untuk error messages
-- Pastikan koneksi internet stabil
+- Ensure the API key is valid in `main.properties`
+- Check the browser console for error messages
+- Make sure your internet connection is stable
 
 ### Input Validation Errors
-- Input tidak boleh kosong
-- Maksimal 1000 karakter
-- Tidak boleh mengandung karakter berbahaya
+- Input must not be empty
+- Maximum 1000 characters
+- No harmful characters allowed
 
 ## 📞 Support
 
-Jika mengalami masalah, periksa:
-1. Console browser untuk error messages
-2. Koneksi internet
-3. Validitas API key
-4. Format file `tuning.txt`
+If you encounter issues, check:
+1. Browser console for error messages
+2. Internet connection
+3. API key validity
+4. Format of the `tuning.txt` file
 
-## 🔄 Versi
-
-- **v1.0.0** - Initial release dengan fitur dasar
-- **v1.1.0** - Added security improvements dan error handling
